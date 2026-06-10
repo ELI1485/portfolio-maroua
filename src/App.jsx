@@ -43,33 +43,33 @@ const Portfolio = () => {
     setTimeout(() => {
       const lowerInput = userMsg.toLowerCase();
       let response = lang === 'en' 
-        ? "I'm not sure how to answer that. You can ask me about Maroua's skills, her projects, or why she would be a great intern!"
-        : "Je ne suis pas sûr de savoir comment répondre. Vous pouvez m'interroger sur les compétences de Maroua, ses projets ou pourquoi elle ferait une excellente stagiaire !";
+        ? "I'm not sure how to answer that. You can ask me about Maroua's skills, her projects, or why she would be a great IT intern!"
+        : "Je ne suis pas sûr de savoir comment répondre. Vous pouvez m'interroger sur les compétences de Maroua, ses projets ou pourquoi elle ferait une excellente stagiaire en IT !";
       
       if (lowerInput.includes('stagiaire') || lowerInput.includes('intern') || lowerInput.includes('hire') || lowerInput.includes('why')) {
         response = lang === 'en'
-          ? "Maroua is actively seeking an internship! As an AI & Digital Transformation engineering student, she combines strong theoretical knowledge with hands-on experience in modern stacks (Laravel, PHP, Python, C). She is highly adaptable, autonomous, and ready to bring value to your team from day one."
-          : "Maroua recherche activement un stage ! En tant qu'élève ingénieure en IA & Transformation Digitale, elle combine de solides connaissances théoriques avec une expérience pratique des technologies modernes (Laravel, PHP, Python, C). Elle est autonome et prête à apporter de la valeur à votre équipe dès le premier jour.";
-      } else if (lowerInput.includes('bring') || lowerInput.includes('value') || lowerInput.includes('company') || lowerInput.includes('contribute')) {
+          ? "Maroua is actively seeking an IT/Software Engineering PFA internship! As an AI & Digital Transformation engineering student, she brings hands-on experience in web systems (Laravel, PHP), process automation (Python, NLP), and enterprise architecture (ArchiMate, Zachman) — all directly applicable to digitizing workflows and internal IT systems."
+          : "Maroua recherche activement un stage PFA en IT/Ingénierie Logicielle ! En tant qu'élève ingénieure en IA & Transformation Digitale, elle apporte une expérience pratique en systèmes web (Laravel, PHP), automatisation de processus (Python, NLP) et architecture d'entreprise (ArchiMate, Zachman) — directement applicable à la digitalisation des flux.";
+      } else if (lowerInput.includes('bring') || lowerInput.includes('value') || lowerInput.includes('company') || lowerInput.includes('contribute') || lowerInput.includes('industrial') || lowerInput.includes('industrie')) {
         response = lang === 'en'
-          ? "Maroua will bring a unique blend of deep technical expertise (Laravel, PHP, Java, Python, C) and strategic enterprise architecture skills (ArchiMate) to your company. Her ability to translate complex business needs into efficient, automated digital solutions will add immediate, tangible value to your team."
-          : "Maroua apportera à votre entreprise un mélange unique d'expertise technique (Laravel, PHP, Java, Python, C) et de compétences en architecture d'entreprise (ArchiMate). Sa capacité à traduire des besoins complexes en solutions numériques automatisées ajoutera une valeur immédiate à votre équipe.";
+          ? "In an industrial setting, Maroua can contribute to digitizing internal processes, automating reporting (Python + Excel), building management dashboards, and supporting IT infrastructure. Her PFE management platform and Building Permit system demonstrate her ability to deliver production-ready web applications with complex workflows."
+          : "Dans un environnement industriel, Maroua peut contribuer à la digitalisation des processus internes, l'automatisation de reportings (Python + Excel), la création de tableaux de bord et le support IT. Sa plateforme de gestion PFE et son système de permis de construire démontrent sa capacité à livrer des applications web complexes prêtes pour la production.";
       } else if (lowerInput.includes('skill') || lowerInput.includes('tech') || lowerInput.includes('language') || lowerInput.includes('compétence')) {
         response = lang === 'en'
-          ? "She is proficient in PHP, Python, Java, C, and web technologies. She also speaks English, French, and Arabic fluently, and has basic knowledge of Korean (B2 understanding, reading and writing)!"
-          : "Elle maîtrise PHP, Python, Java, C et les technologies web. Elle parle couramment anglais, français et arabe, et possède un niveau B2 en coréen (compréhension, lecture et écriture) !";
+          ? "She is proficient in PHP, Python, Java, C, JavaScript, and web technologies (Laravel, MySQL). For industrial IT roles, she also has enterprise architecture skills (ArchiMate, Zachman, UML, Merise) and experience with process automation and NLP. She speaks English, French, Arabic (native), and Korean (B2)!"
+          : "Elle maîtrise PHP, Python, Java, C, JavaScript et les technologies web (Laravel, MySQL). Pour les rôles IT industriels, elle possède aussi des compétences en architecture d'entreprise (ArchiMate, Zachman, UML, Merise) et en automatisation. Elle parle anglais, français, arabe (natif) et coréen (B2) !";
       } else if (lowerInput.includes('project') || lowerInput.includes('portfolio') || lowerInput.includes('work') || lowerInput.includes('projet')) {
         response = lang === 'en'
-          ? "She has worked on impressive projects including a Pharmacy Management System in C, a custom Automata Compiler, and a movie management platform called CozyWatch. Check out the Projects section!"
-          : "Elle a travaillé sur des projets impressionnants, notamment un système de gestion de pharmacie en C, un compilateur d'automates personnalisé et une plateforme de films (CozyWatch). Consultez la section Projets !";
+          ? "Her key projects include a PFE Assignment & Management System (Laravel + MySQL), a Building Permit digitalization platform with NLP, a Universal Data Analyzer (Python + Streamlit), and a Custom Automata Compiler (C + Flex + Bison). Check out the Projects section for the full list!"
+          : "Ses projets phares incluent un système de gestion des PFE (Laravel + MySQL), une plateforme de digitalisation des permis de construire avec NLP, un analyseur de données universel (Python + Streamlit) et un compilateur d'automates (C + Flex + Bison). Consultez la section Projets !";
       } else if (lowerInput.includes('contact') || lowerInput.includes('email') || lowerInput.includes('phone') || lowerInput.includes('reach')) {
         response = lang === 'en'
           ? "You can reach her via email at arbouni.maroua@etu.uae.ac.ma or connect with her on LinkedIn. Scroll down to the Contact section for quick links!"
           : "Vous pouvez la contacter par e-mail à l'adresse arbouni.maroua@etu.uae.ac.ma ou sur LinkedIn. Descendez jusqu'à la section Contact !";
       } else if (lowerInput.includes('hello') || lowerInput.includes('hi') || lowerInput.includes('bonjour') || lowerInput.includes('salut')) {
         response = lang === 'en'
-          ? "Hello there! What would you like to know about Maroua?"
-          : "Bonjour ! Que souhaitez-vous savoir sur Maroua ?";
+          ? "Hello there! What would you like to know about Maroua? You can ask about her skills, projects, or why she'd be a great IT intern!"
+          : "Bonjour ! Que souhaitez-vous savoir sur Maroua ? Posez-moi des questions sur ses compétences, ses projets ou pourquoi elle ferait une excellente stagiaire IT !";
       }
 
       setMessages(prev => [...prev, { sender: 'ai', text: response }]);
@@ -82,7 +82,7 @@ const Portfolio = () => {
       hero: {
         greeting: "Hello, I'm",
         role: "AI & Digital Transformation Engineering Student",
-        desc: "Equipped with strong analytical skills and expertise ranging from web development to enterprise architecture and artificial intelligence integration. Passionate about designing innovative digital platforms.",
+        desc: "Seeking an IT internship in an industrial environment. Experienced in full-stack web development, process automation, ERP concepts, and enterprise architecture. Ready to digitalize and optimize internal systems from day one.",
         viewProjects: "View Projects",
         downloadCV: "Download CV",
         letsTalk: "Let's Talk",
@@ -92,14 +92,15 @@ const Portfolio = () => {
       skills: {
         title: "Technical Skills",
         prog: "Programming",
-        frameworks: "Frameworks",
-        arch: "Architecture",
-        lang: "Languages",
-        langList: "English, French, Arabic, Korean (B2 Level)"
+        frameworks: "Frameworks & Tools",
+        arch: "Architecture & Modeling",
+        db: "Databases & Systems",
+        lang: "Languages Spoken",
+        langList: "Arabic (Native), French, English, Korean (B2)"
       },
       projects: {
         title: "Completed Projects",
-        viewMore: "View more"
+        viewMore: "View on GitHub"
       },
       contact: {
         title: "Ready to collaborate?",
@@ -114,7 +115,7 @@ const Portfolio = () => {
       hero: {
         greeting: "Bonjour, je suis",
         role: "Élève Ingénieure en IA & Transformation Digitale",
-        desc: "Dotée de solides compétences analytiques et d'une expertise allant du développement web à l'architecture d'entreprise et l'intégration de l'IA. Passionnée par la conception de plateformes numériques innovantes.",
+        desc: "À la recherche d'un stage IT en environnement industriel. Expérimentée en développement web full-stack, automatisation de processus, concepts ERP et architecture d'entreprise. Prête à digitaliser et optimiser les systèmes internes dès le premier jour.",
         viewProjects: "Voir les projets",
         downloadCV: "Télécharger CV",
         letsTalk: "Me contacter",
@@ -124,14 +125,15 @@ const Portfolio = () => {
       skills: {
         title: "Compétences Techniques",
         prog: "Programmation",
-        frameworks: "Frameworks",
-        arch: "Architecture",
-        lang: "Langues",
-        langList: "Anglais, Français, Arabe, Coréen (Niveau B2)"
+        frameworks: "Frameworks & Outils",
+        arch: "Architecture & Modélisation",
+        db: "Bases de données & Systèmes",
+        lang: "Langues Parlées",
+        langList: "Arabe (Natif), Français, Anglais, Coréen (Niveau B2)"
       },
       projects: {
         title: "Projets Réalisés",
-        viewMore: "Voir plus"
+        viewMore: "Voir sur GitHub"
       },
       contact: {
         title: "Prêt à collaborer ?",
@@ -145,20 +147,22 @@ const Portfolio = () => {
 
   const projectsData = {
     en: [
-      { title: 'Building Permit Platform', tech: 'Laravel, MySQL, Python (NLP), Taiga', desc: 'Accomplished full digitalization of building permit lifecycles by designing a comprehensive web platform featuring online submission and multi-actor validation.', icon: <Server size={24} /> },
-      { title: 'Universal Data Analyzer', tech: 'Python, Pandas, Streamlit, SQLite', desc: 'Automated cross-file data consolidation and reporting for rapid insights by engineering a Python application that processes multiple Excel uploads.', icon: <Database size={24} /> },
-      { title: 'CozyWatch', tech: 'Laravel, PHP, Bootstrap', desc: 'Developed a movie management platform using Laravel MVC, featuring full CRUD operations and a robust database schema.', icon: <FileCode size={24} /> },
-      { title: 'MediControl (C)', tech: 'C, Linked Lists, File I/O', desc: 'Developed an application in C utilizing linked lists to handle pharmacy stock management, order tracking, and centralized low-stock notifications.', icon: <Terminal size={24} /> },
-      { title: 'Boarding School Architecture', tech: 'ArchiMate, Zachman Framework', desc: 'Designed the enterprise architecture (AS-IS to TO-BE) for a boarding school platform covering student accommodation, secure payments, and BI reporting.', icon: <Briefcase size={24} /> },
-      { title: 'Custom Automata Compiler', tech: 'C, Flex, Bison, Graphviz', desc: 'Created "Language A", a custom language compiled with Flex and Bison, designed to generate and simulate automata with semantic error detection.', icon: <Terminal size={24} /> }
+      { title: 'PFE Assignment & Management System', tech: 'Laravel, MySQL, Bootstrap, JavaScript', desc: 'Engineered a full-stack web application automating student-supervisor assignments with Excel parsing and an automated defense scheduling module coordinating supervisors, juries, rooms and timeslots.', icon: <Briefcase size={24} />, github: null },
+      { title: 'Building Permit Platform', tech: 'Laravel, MySQL, Python (NLP), Taiga', desc: 'Full digitalization of building permit lifecycles: online submission, multi-actor validation workflows, digital archiving, and NLP-powered document compliance verification.', icon: <Server size={24} />, github: null },
+      { title: 'Universal Data Analyzer', tech: 'Python, Pandas, Streamlit, PySide6, SQLite', desc: 'Automated cross-file Excel consolidation with dynamic chart generation — delivered as both a desktop GUI (PySide6) and a web dashboard (Streamlit).', icon: <Database size={24} />, github: null },
+      { title: 'Boarding School Architecture', tech: 'ArchiMate, Zachman Framework, SWOT, PESTEL', desc: 'Designed full enterprise architecture (AS-IS to TO-BE) for a boarding school platform covering accommodation, secure payments, maintenance ticketing, and BI reporting.', icon: <Briefcase size={24} />, github: null },
+      { title: 'CozyWatch', tech: 'Laravel, PHP, Bootstrap', desc: 'Movie management platform using Laravel MVC with full CRUD, user authentication, and a robust relational database schema.', icon: <FileCode size={24} />, github: 'https://github.com/ELI1485/CozyWatch.git' },
+      { title: 'MediControl (C)', tech: 'C, Linked Lists, File I/O', desc: 'Pharmacy stock management system in C with linked lists — handling inventory, order tracking, and automated low-stock notifications.', icon: <Terminal size={24} />, github: 'https://github.com/ELI1485/PHARMACY_MANAGEMENT.git' },
+      { title: 'Custom Automata Compiler', tech: 'C, Flex, Bison, Graphviz', desc: 'Created "Language A", a custom language compiled with Flex and Bison, designed to generate and simulate automata with semantic error detection and Graphviz exports.', icon: <Terminal size={24} />, github: null }
     ],
     fr: [
-      { title: 'Plateforme de Permis de Construire', tech: 'Laravel, MySQL, Python (NLP), Taiga', desc: 'Digitalisation complète du cycle de vie des permis de construire en concevant une plateforme web avec soumission en ligne et validation multi-acteurs.', icon: <Server size={24} /> },
-      { title: 'Analyseur de Données Universel', tech: 'Python, Pandas, Streamlit, SQLite', desc: 'Automatisation de la consolidation de données inter-fichiers en développant une application Python qui traite plusieurs fichiers Excel pour générer des rapports unifiés.', icon: <Database size={24} /> },
-      { title: 'CozyWatch', tech: 'Laravel, PHP, Bootstrap', desc: 'Développement d\'une plateforme de gestion de films avec Laravel MVC, incluant des opérations CRUD complètes et un schéma de base de données robuste.', icon: <FileCode size={24} /> },
-      { title: 'MediControl (C)', tech: 'C, Listes Chaînées, Fichiers I/O', desc: 'Développement d\'une application en C utilisant des listes chaînées pour gérer les stocks de pharmacie, le suivi des commandes et les alertes de rupture de stock.', icon: <Terminal size={24} /> },
-      { title: 'Architecture d\'Internat', tech: 'ArchiMate, Zachman Framework', desc: 'Conception de l\'architecture d\'entreprise (AS-IS vers TO-BE) pour une plateforme d\'internat couvrant l\'hébergement, les paiements et le reporting BI.', icon: <Briefcase size={24} /> },
-      { title: 'Compilateur d\'Automates', tech: 'C, Flex, Bison, Graphviz', desc: 'Création de "Language A", un langage personnalisé compilé avec Flex et Bison, conçu pour générer et simuler des automates avec détection d\'erreurs sémantiques.', icon: <Terminal size={24} /> }
+      { title: 'Système de Gestion des PFE', tech: 'Laravel, MySQL, Bootstrap, JavaScript', desc: 'Application web full-stack automatisant l\'affectation étudiant-encadrant avec parsing Excel et un module de planification automatique des soutenances coordonnant jurys, salles et créneaux.', icon: <Briefcase size={24} />, github: null },
+      { title: 'Plateforme de Permis de Construire', tech: 'Laravel, MySQL, Python (NLP), Taiga', desc: 'Digitalisation complète du cycle de vie des permis de construire : soumission en ligne, validation multi-acteurs, archivage numérique et vérification documentaire par NLP.', icon: <Server size={24} />, github: null },
+      { title: 'Analyseur de Données Universel', tech: 'Python, Pandas, Streamlit, PySide6, SQLite', desc: 'Consolidation automatisée de fichiers Excel avec génération de graphiques — livré en interface desktop (PySide6) et tableau de bord web (Streamlit).', icon: <Database size={24} />, github: null },
+      { title: 'Architecture d\'Internat', tech: 'ArchiMate, Zachman Framework, SWOT, PESTEL', desc: 'Architecture d\'entreprise complète (AS-IS vers TO-BE) pour une plateforme d\'internat couvrant hébergement, paiements sécurisés, tickets de maintenance et reporting BI.', icon: <Briefcase size={24} />, github: null },
+      { title: 'CozyWatch', tech: 'Laravel, PHP, Bootstrap', desc: 'Plateforme de gestion de films avec Laravel MVC, CRUD complet, authentification utilisateur et schéma relationnel robuste.', icon: <FileCode size={24} />, github: 'https://github.com/ELI1485/CozyWatch.git' },
+      { title: 'MediControl (C)', tech: 'C, Listes Chaînées, Fichiers I/O', desc: 'Système de gestion de stocks de pharmacie en C avec listes chaînées — inventaire, suivi des commandes et alertes automatiques de rupture.', icon: <Terminal size={24} />, github: 'https://github.com/ELI1485/PHARMACY_MANAGEMENT.git' },
+      { title: 'Compilateur d\'Automates', tech: 'C, Flex, Bison, Graphviz', desc: 'Création de "Language A", un langage personnalisé compilé avec Flex et Bison pour générer et simuler des automates avec détection d\'erreurs sémantiques.', icon: <Terminal size={24} />, github: null }
     ]
   };
 
@@ -230,17 +234,22 @@ const Portfolio = () => {
             
             <div className="glass-panel" style={{ padding: '2rem' }}>
               <h3 className="font-accent" style={{ marginBottom: '1rem', color: 'var(--accent)', fontSize: '1.5rem' }}>{currentT.skills.prog}</h3>
-              <p>PHP, Python, Java (OOP), C, HTML, CSS</p>
+              <p>PHP, Python, Java (OOP), C, JavaScript, HTML, CSS</p>
             </div>
             
             <div className="glass-panel" style={{ padding: '2rem' }}>
               <h3 className="font-accent" style={{ marginBottom: '1rem', color: 'var(--accent)', fontSize: '1.5rem' }}>{currentT.skills.frameworks}</h3>
-              <p>Laravel, Bootstrap, Linux, MySQL</p>
+              <p>Laravel, Bootstrap, Streamlit, PySide6, Git, Taiga, Linux</p>
             </div>
             
             <div className="glass-panel" style={{ padding: '2rem' }}>
+              <h3 className="font-accent" style={{ marginBottom: '1rem', color: 'var(--accent)', fontSize: '1.5rem' }}>{currentT.skills.db}</h3>
+              <p>MySQL, SQLite, ERP Concepts, Information Systems</p>
+            </div>
+
+            <div className="glass-panel" style={{ padding: '2rem' }}>
               <h3 className="font-accent" style={{ marginBottom: '1rem', color: 'var(--accent)', fontSize: '1.5rem' }}>{currentT.skills.arch}</h3>
-              <p>ArchiMate, SWOT, PESTEL, Porter</p>
+              <p>ArchiMate, Zachman, UML, Merise, SWOT, PESTEL, Porter</p>
             </div>
 
             <div className="glass-panel" style={{ padding: '2rem' }}>
@@ -261,7 +270,11 @@ const Portfolio = () => {
                 <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>{project.title}</h3>
                 <p className="font-accent" style={{ color: 'var(--text-muted)', marginBottom: '1rem', fontSize: '0.9rem' }}>{project.tech}</p>
                 <p style={{ flex: 1 }}>{project.desc}</p>
-                <button className="glass-button" style={{ marginTop: '1.5rem', alignSelf: 'flex-start' }}>{currentT.projects.viewMore}</button>
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noreferrer" className="glass-button" style={{ marginTop: '1.5rem', alignSelf: 'flex-start', textDecoration: 'none' }}>
+                    {currentT.projects.viewMore}
+                  </a>
+                )}
               </div>
             ))}
           </div>
