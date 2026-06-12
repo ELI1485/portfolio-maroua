@@ -18,4 +18,11 @@ export default defineConfig([
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
   },
+  {
+    // Vercel Edge Functions run in a worker-like runtime with process.env
+    files: ['api/**/*.js'],
+    languageOptions: {
+      globals: { ...globals.browser, process: 'readonly' },
+    },
+  },
 ])

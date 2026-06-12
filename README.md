@@ -1,16 +1,45 @@
-# React + Vite
+# Maroua Arbouni — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio of **Maroua Arbouni**, AI & Digital Transformation engineering student at ENSA Al Hoceima.
 
-Currently, two official plugins are available:
+**Live:** https://portfolio-maroua-gamma.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- [Vite](https://vite.dev) + [React 19](https://react.dev) — no UI framework, hand-crafted CSS design system
+- [lucide-react](https://lucide.dev) icons
+- EN / FR language toggle · dark / light themes
+- AI assistant ("maroua.ai") powered by **NVIDIA Nemotron 3 Ultra** via a Vercel Edge Function
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Development
 
-## Expanding the ESLint configuration
+```bash
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> Note: the AI chat needs the serverless function, which only runs on Vercel
+> (or locally via `vercel dev`). With plain `npm run dev` the chat shows a
+> graceful fallback message.
+
+## AI chat setup (Vercel)
+
+The chatbot calls `api/chat.js`, an Edge Function that proxies
+`nvidia/nemotron-3-ultra-550b-a55b` on [NVIDIA NIM](https://build.nvidia.com).
+The API key is **never** committed or shipped to the browser.
+
+1. Vercel → Project → **Settings → Environment Variables**
+2. Add `NVIDIA_API_KEY` = your `nvapi-…` key (Production + Preview)
+3. Redeploy
+
+## Structure
+
+```
+api/chat.js        # Edge function: NVIDIA proxy + persona prompt (streams text)
+src/App.jsx        # Page composition
+src/ChatWidget.jsx # Streaming chat dock
+src/i18n.js        # EN/FR copy
+src/data.js        # Projects, skills, links
+src/hooks.js       # Reveal-on-scroll, typewriter, scroll progress
+src/index.css      # Design system (tokens + components)
+```
